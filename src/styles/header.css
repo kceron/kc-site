@@ -1,0 +1,142 @@
+.padding-wrapper {
+  /* position: relative;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box; */
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  /* pointer-events: auto; */
+  /* display: flex; */
+}
+
+/* TITLE */
+.nav-wrapper {
+  border: 1px solid hsl(0, 9%, 96%);
+  height: 80px;
+  background-color: hsl(0, 9%, 96%);
+  display: flex;
+  flex-wrap: nowrap;
+  /* flex: 1 0 67%; */
+  align-items: center;
+  width: 100%;
+  border-radius: 50% 20% / 10% 40%;
+}
+.header-title-container {
+  flex: 10%;
+  margin-right: 2.5vw;
+  padding-left: 20px;
+  letter-spacing: 1px;
+}
+
+/* NAV BAR DESKTOP*/
+.header-nav-item {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.header-nav-item a {
+  color: var(--navigationLinkColor);
+  text-decoration: none;
+  backface-visibility: hidden;
+  padding: 0.1em 0;
+}
+
+.nav-desktop {
+  flex: 50%;
+  text-align: right;
+  padding-right: 20px;
+}
+.nav-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.nav-list .header-nav-item:not(:last-child) {
+  margin-right: 1.1vw;
+}
+
+.selected-section {
+  border-bottom: 1px solid var(--navigationLinkColor);
+}
+/* .header-title {
+  flex-grow: 0;
+  flex-shrink: 0;
+  backface-visibility: hidden;
+} */
+
+/* MOBILE  */
+.nav-mobile {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 620px) {
+  .nav-wrapper {
+    padding: 6vw;
+  }
+  .nav-mobile {
+    display: block;
+  }
+  .nav-desktop {
+    display: none;
+  }
+  .header-title-container {
+    padding-left: 0px;
+  }
+  .home-page{
+    /* padding: 10px 20px; */
+    overflow: hidden;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .content-first-block{
+    width: 36%;
+    /* font-size: 12px; */
+    padding: 10px 5px;
+  }
+  .content-second-block{
+    width: 45%;
+    /* font-size: 12px; */
+    padding: 10px 5px;
+  }
+  .resume-wrapper {
+    margin-left: -140px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 375px){
+  .content-first-block{
+    font-size: 12px;
+  }
+  .content-second-block{
+    font-size: 12px;
+  }
+  .resume-wrapper {
+    margin-left: -100px;
+  }
+} 
+
+/* MENU ANIMATION  */
+
+.nav-overlay {
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  /* z-index: -2; */
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+  padding: 1em 4em;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+}
+
+/* MOBILE  */
+.a-mobile-box {
+  padding-top: 1em;
+}
