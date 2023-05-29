@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/karem-ceron/static/css/main.150cc154.css",
+    "main.js": "/karem-ceron/static/js/main.25117259.js",
+    "static/media/wotfard-regular-webfont.ttf": "/karem-ceron/static/media/wotfard-regular-webfont.5ff2a2f383d647167bb0.ttf",
+    "static/media/wotfard-regular-webfont.eot": "/karem-ceron/static/media/wotfard-regular-webfont.409bf748ebd44e3c4852.eot",
+    "static/media/DevResume.pdf": "/karem-ceron/static/media/DevResume.379c70231ec2bba308d4.pdf",
+    "static/media/devCat.svg": "/karem-ceron/static/media/devCat.2a35594f96acbf3dac5837808e222052.svg",
+    "static/media/devGirlCat.svg": "/karem-ceron/static/media/devGirlCat.d0692d12a36762b333ed871e26d1fe34.svg",
+    "static/media/wotfard-regular-webfont.woff2": "/karem-ceron/static/media/wotfard-regular-webfont.46881ba254557ba5ead0.woff2",
+    "static/media/instagram-black.svg": "/karem-ceron/static/media/instagram-black.613919491d2c93f397ce6b0020de5720.svg",
+    "static/media/github-black.svg": "/karem-ceron/static/media/github-black.56951958776829fd87e9049fa1927c16.svg",
+    "index.html": "/karem-ceron/index.html",
+    "static/media/linkedin-black.svg": "/karem-ceron/static/media/linkedin-black.48f4acce54e78738c735465f55f1ae7f.svg",
+    "main.150cc154.css.map": "/karem-ceron/static/css/main.150cc154.css.map",
+    "main.25117259.js.map": "/karem-ceron/static/js/main.25117259.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.150cc154.css",
+    "static/js/main.25117259.js"
+  ]
+}
