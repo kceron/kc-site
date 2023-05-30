@@ -5,14 +5,13 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 
-import devGirlCat from "./images/devGirlCat.svg";
 import devCat from "./images/devCat.svg";
 import Footer from "./components/Footer";
 
 function App() {
   const [sections, setSections] = useState({
     home: true,
-    // skills: false,
+    skills: false,
     projects: false,
     contact: false,
   });
@@ -57,10 +56,9 @@ function App() {
         <Home initialAnimation={initialAnimation} />
       ) : sections.projects ? (
         <Projects />
-      ) : // : sections.skills ? (
-      //   <Skills />
-      // )
-      sections.contact ? (
+      ) : sections.skills ? (
+        <Skills />
+      ) : sections.contact ? (
         <Contact />
       ) : null}
 

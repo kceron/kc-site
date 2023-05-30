@@ -6,7 +6,6 @@ const Home = ({ initialAnimation }) => {
   // console.log(initialAnimation);
 
   return (
-    // <>
     <div className="padding-wrapper home-page">
       {!initialAnimation && (
         <>
@@ -36,7 +35,6 @@ const Home = ({ initialAnimation }) => {
         </>
       )}
     </div>
-    // </>
   );
 };
 

@@ -6,6 +6,12 @@ import { Input } from "antd";
 
 const Contact = () => {
   const { TextArea } = Input;
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log("SEND EMAIL")
+  }
+
   return (
     <div className="padding-wrapper contact-wrapper">
       <div className="form-wrapper">
@@ -13,8 +19,8 @@ const Contact = () => {
           If you have a project in mind or just want to connect, please complete
           the form below to contact me.
         </p>
-        <form className="contact-form">
-          <label htmlFor="name">Name</label>
+        <form className="contact-form" onSubmit={(e) => sendEmail(e)}>
+          <label htmlFor="name" className="contact-label">Name</label>
           <Input id="name" className="contact-input" />
 
           <label htmlFor="email" className="contact-label">
@@ -49,9 +55,6 @@ const Contact = () => {
       </div>
 
       <div className="social-media-wrapper">
-        {/* <a href=”https://codingbeautydev.com“ target="_blank"> <img src={LinkedinIcon} alt="LinkedIn Link" />
-        </a>
-         */}
         <a href="https://www.linkedin.com/in/karem-ceron/" target="_blank" className="social-media-link">
           <img src={LinkedinIcon} alt="LinkedIn Link" />
         </a>

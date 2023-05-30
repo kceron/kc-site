@@ -2,44 +2,20 @@ import React, { useEffect, useState } from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { GrClose } from "react-icons/gr";
 
-import {
-  IconGithub_badge,
-  IconLinkedin,
-  IconEmailOutline,
-} from "../images/svgIcons";
 import "../styles/header.css";
 
 const Header = ({ initialAnimation, sections, onNavItemClick }) => {
   const [navMobileOpen, setNavMobileOpen] = useState(false);
-  // const [lat, setLat] = useState([]);
-  // const [long, setLong] = useState([]);
   // console.log("sections", sections);
   const sectionsArr = Object.keys(sections);
   // console.log("sectionsArr-", sectionsArr);
-  // useEffect(() => {
-  //   // add shadow animation to ask if user would like to see the weather
-  //   if ("geolocation" in navigator) {
-  //     // navigator.geolocation.getCurrentPosition(successCallback);
-  //     navigator.geolocation.getCurrentPosition((position) => {
-  //       setLat(position.coords.latitude);
-  //       setLong(position.coords.longitude);
-  //     });
-
-  //     console.log("Latitude is:", lat);
-  //     console.log("Longitude is:", long);
-  //   } else {
-  //     // Use a third-party geolocation service
-  //     console.log("Browser does not support the Geolocation API");
-  //   }
-  // }, [lat, long]);
 
   return (
     <div className="padding-wrapper">
       <div className="nav-wrapper">
         <div className="header-title-container">
-          <h2 className="header-title">
+          <h2 className="header-title" onClick={() => onNavItemClick("home")}>
             Karem Ceron
-            {/* <a href="">Karem Ceron</a> */}
           </h2>
         </div>
 

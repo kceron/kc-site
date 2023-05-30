@@ -47,15 +47,6 @@
   color: hsl(0deg 0% 0%);
 }
 
-.center-element {
-  margin: auto;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-}
-
 .home-text {
   text-align: justify;
 }
@@ -92,6 +83,13 @@
   border: 5px white solid;
   animation: float 4s ease-in-out infinite;
   background: hsl(0deg 0% 100%);
+
+  margin: auto;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
 }
 
 /* FOOTER  */
@@ -119,22 +117,27 @@
   padding-bottom: 1vw !important;
 }
 .form-wrapper {
-  padding: 1% 10%;
+  padding: 0% 15%;
+  text-align: center;
+  /* width: 950px; */
 }
 .contact-form {
   margin-top: 20px;
   border: 1px solid hsl(0, 10%, 96%);
-  padding: 50px;
+  padding: 40px;
   border-radius: 25% 10%;
-  background: hsl(120deg 18% 88%);
+  background: hsl(120deg 29.08% 94.43%);
   /* background: hsl(233deg 25% 86%); */
   padding-bottom: 40px;
 }
 .contact-label {
   display: block;
+  text-align: left;
+  padding: 15px 0px 0px 40px;
 }
 .contact-input {
-  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
 }
 .contact-btn-wrapper {
   margin-top: 30px;
@@ -163,7 +166,7 @@
   font-weight: 600;
 }
 .skills-text{
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 }
 dl {
 	display: grid;
