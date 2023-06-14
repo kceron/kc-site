@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/karem-ceron/static/css/main.0707643d.css",
-    "main.js": "/karem-ceron/static/js/main.589dae67.js",
+    "main.js": "/karem-ceron/static/js/main.852053ba.js",
     "static/media/wotfard-regular-webfont.ttf": "/karem-ceron/static/media/wotfard-regular-webfont.5ff2a2f383d647167bb0.ttf",
     "static/media/wotfard-regular-webfont.eot": "/karem-ceron/static/media/wotfard-regular-webfont.409bf748ebd44e3c4852.eot",
     "static/media/DevResume.pdf": "/karem-ceron/static/media/DevResume.379c70231ec2bba308d4.pdf",
@@ -12,10 +12,10 @@
     "index.html": "/karem-ceron/index.html",
     "static/media/linkedin-black.svg": "/karem-ceron/static/media/linkedin-black.48f4acce54e78738c735465f55f1ae7f.svg",
     "main.0707643d.css.map": "/karem-ceron/static/css/main.0707643d.css.map",
-    "main.589dae67.js.map": "/karem-ceron/static/js/main.589dae67.js.map"
+    "main.852053ba.js.map": "/karem-ceron/static/js/main.852053ba.js.map"
   },
   "entrypoints": [
     "static/css/main.0707643d.css",
-    "static/js/main.589dae67.js"
+    "static/js/main.852053ba.js"
   ]
 }
