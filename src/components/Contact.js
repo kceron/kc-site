@@ -133,7 +133,7 @@ const Contact = () => {
           />
           <div className="contact-btn-wrapper">
             <button
-              className={`submit-btn ${loadSubmit ? "disabled-btn" : ""}`}
+              className={`main-btn ${loadSubmit ? "disabled-btn" : ""}`}
               type="submit"
               disabled={loadSubmit ? true : false}
             >

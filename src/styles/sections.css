@@ -30,12 +30,12 @@
   padding: 10vw !important;
   padding-bottom: 5vw !important;
 }
-.submit-btn {
+.main-btn {
   background: hsl(0deg 0% 0%);
   color: hsl(40deg 20% 97%);
   padding: 8px 12px;
 }
-.submit-btn:hover {
+.main-btn:hover {
   cursor: pointer;
   background: hsl(40deg 20% 97%);
   color: hsl(0deg 0% 0%);
