@@ -9,6 +9,7 @@ const Header = ({ initialAnimation, sections, onNavItemClick }) => {
   // console.log("sections", sections);
   const sectionsArr = Object.keys(sections);
   // console.log("sectionsArr-", sectionsArr);
+  // console.log("navMobileOpen-", navMobileOpen);
 
   return (
     <div className="padding-wrapper">
@@ -42,11 +43,12 @@ const Header = ({ initialAnimation, sections, onNavItemClick }) => {
           className="nav-mobile menu-toggle"
           onClick={() => setNavMobileOpen(!navMobileOpen)}
         >
-          {!navMobileOpen ? (
-            <HiMenuAlt4 size={26} className="" />
-          ) : (
-            <GrClose size={24} className="" />
-          )}
+          {!initialAnimation &&
+            (!navMobileOpen ? (
+              <HiMenuAlt4 size={26} className="" />
+            ) : (
+              <GrClose size={24} className="" />
+            ))}
         </div>
       </div>
 
@@ -54,7 +56,7 @@ const Header = ({ initialAnimation, sections, onNavItemClick }) => {
         <div className="nav-list-mobile nav-overlay">
           {sectionsArr.map((section) => {
             return (
-              <div className="header-nav-item a-mobile-box">
+              <div className="header-nav-item a-mobile-box" key={section}>
                 <a
                   className={sections[section] ? "selected-section" : ""}
                   onClick={() => {

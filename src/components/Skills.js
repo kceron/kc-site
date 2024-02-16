@@ -14,6 +14,11 @@ const Skills = () => {
           <dd>React, RTK, Ant Design of React, Rails, SASS, Material UI</dd>
         </div>
         <div>
+          <dt className="skill-bold">Frontend Testing</dt>
+          <dd>Web Automation - Playwright</dd>
+          <dd>Jest, React Testing Library, WCAG/ANDI</dd>
+        </div>
+        <div>
           <dt className="skill-bold">Design Software</dt>
           <dd>Figma</dd>
         </div>
@@ -24,10 +29,6 @@ const Skills = () => {
         <div>
           <dt className="skill-bold">RDBMS</dt>
           <dd>MySQL, PostgreSQL</dd>
-        </div>
-        <div>
-          <dt className="skill-bold">Frontend Testing</dt>
-          <dd>Jest, React Testing Library, WCAG/ANDI</dd>
         </div>
       </dl>
     </div>

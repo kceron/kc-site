@@ -4,7 +4,7 @@
   width: 100%;
   box-sizing: border-box; */
   padding-top: 3vw;
-  padding-bottom: 3vw;
+  padding-bottom: 2vw;
   padding-left: 4vw;
   padding-right: 4vw;
   /* pointer-events: auto; */
@@ -93,12 +93,13 @@
     padding-right: 2vw;
   }
   .content-first-block{
-    width: 36%;
+    width: 30%;
     /* font-size: 12px; */
     padding: 10px 5px;
+    margin-right: 0px;
   }
   .content-second-block{
-    width: 45%;
+    width: 55%;
     /* font-size: 12px; */
     padding: 10px 5px;
   }

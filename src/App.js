@@ -38,6 +38,7 @@ function App() {
 
   return (
     <div className="App">
+      {/* <div className="toggle-color">COLOR ICON</div> */}
       <Header
         initialAnimation={initialAnimation}
         sections={sections}

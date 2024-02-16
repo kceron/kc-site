@@ -1,43 +1,125 @@
-import LinkedinIcon from "../images/linkedin-black.svg";
-import InstagramIcon from "../images/instagram-black.svg"
-import GithubIcon from "../images/github-black.svg"
+import { useRef, useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 
+import LinkedinIcon from "../images/linkedin-black.svg";
+import InstagramIcon from "../images/instagram-black.svg";
+import GithubIcon from "../images/github-black.svg";
+import { ImSpinner10 } from "react-icons/im";
+
+import { Alert } from "antd";
 import { Input } from "antd";
 
 const Contact = () => {
   const { TextArea } = Input;
+  const contactFormRef = useRef();
+  const [loadSubmit, setLoadSubmit] = useState(false);
+  const [displayAlert, setDisplayAlert] = useState(false);
+
+  useEffect(() => {
+    contactFormRef.current.user_name.value = null;
+    contactFormRef.current.user_email.value = null;
+    contactFormRef.current.business.value = null;
+    contactFormRef.current.subject.value = null;
+    contactFormRef.current.message.value = null;
+  }, [loadSubmit]);
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log("SEND EMAIL")
-  }
+    setLoadSubmit(true);
+
+    emailjs
+      .sendForm("service_r1yw2pv", "template_94yqqvr", contactFormRef.current, {
+        publicKey: "sNz_wJqUTTHJlrl0f",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setLoadSubmit(false);
+          setDisplayAlert(true);
+          setTimeout(() => {
+            setDisplayAlert(false);
+          }, "5000");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
 
   return (
     <div className="padding-wrapper contact-wrapper">
       <div className="form-wrapper">
+        {displayAlert ? (
+          <div className="alert-container">
+            <Alert message="Success! Message sent." type="success" closable />
+          </div>
+        ) : null}
         <p>
           If you have a project in mind or just want to connect, please complete
           the form below to contact me.
         </p>
-        <form className="contact-form" onSubmit={(e) => sendEmail(e)}>
-          <label htmlFor="name" className="contact-label">Name</label>
-          <Input id="name" className="contact-input" />
 
-          <label htmlFor="email" className="contact-label">
+        {/* {loadSubmit ? (
+          <div className="loading-icon-container">
+            <ImSpinner10 icon="spinner10" size={44} className="loading-icon" />
+          </div>
+        ) : ( */}
+        <form
+          className={`contact-form ${loadSubmit ? "" : ""}`}
+          ref={contactFormRef}
+          onSubmit={(e) => sendEmail(e)}
+        >
+          <label htmlFor="user_name" className="contact-label">
+            Name
+          </label>
+          <Input
+            id="user_name"
+            name="user_name"
+            className="contact-input"
+            required
+            disabled={loadSubmit ? true : false}
+          />
+
+          <label htmlFor="user_email" className="contact-label">
             Email
           </label>
-          <Input id="email" type="email" className="contact-input" />
+          <Input
+            id="user_email"
+            name="user_email"
+            type="email"
+            className="contact-input"
+            required
+            disabled={loadSubmit ? true : false}
+          />
 
           <label htmlFor="business" className="contact-label">
             Business Name
           </label>
-          <Input id="business" type="text" className="contact-input" />
+          <Input
+            id="business"
+            name="business"
+            type="text"
+            className="contact-input"
+            disabled={loadSubmit ? true : false}
+          />
 
-          <label htmlFor="comments" className="contact-label">
-            Additional comments?
+          <label htmlFor="subject" className="contact-label">
+            Subject
+          </label>
+          <Input
+            id="subject"
+            name="subject"
+            className="contact-input"
+            required
+            disabled={loadSubmit ? true : false}
+          />
+
+          <label htmlFor="message" className="contact-label">
+            Message
           </label>
           <TextArea
-            id="comments"
+            id="message"
+            name="message"
             className="contact-input"
             showCount
             maxLength={100}
@@ -45,25 +127,41 @@ const Contact = () => {
               height: 120,
               resize: "none",
             }}
-            // onChange={onChange}
-            placeholder=":)"
+            placeholder="100 chars max :)"
+            required
+            disabled={loadSubmit ? true : false}
           />
           <div className="contact-btn-wrapper">
-            <button className="main-btn">Submit</button>
+            <button
+              className={`submit-btn ${loadSubmit ? "disabled-btn" : ""}`}
+              type="submit"
+              disabled={loadSubmit ? true : false}
+            >
+              Submit
+            </button>
           </div>
         </form>
+        {/* )} */}
       </div>
 
       <div className="social-media-wrapper">
-        <a href="https://www.linkedin.com/in/karem-ceron/" target="_blank" className="social-media-link">
+        <a
+          href="https://www.linkedin.com/in/karem-ceron/"
+          target="_blank"
+          className="social-media-link"
+        >
           <img src={LinkedinIcon} alt="LinkedIn Link" />
         </a>
-        <a href="https://github.com/kceron" target="_blank" className="social-media-link">
+        <a
+          href="https://github.com/kceron"
+          target="_blank"
+          className="social-media-link"
+        >
           <img src={GithubIcon} alt="Github Link" />
         </a>
-        <a href="https://www.instagram.com/karemmm_/" target="_blank" className="social-media-link">
+        {/* <a href="https://www.instagram.com/karemmm_/" target="_blank" className="social-media-link">
           <img src={InstagramIcon} alt="Instagram Link" />
-        </a>
+        </a> */}
       </div>
     </div>
   );
