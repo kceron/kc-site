@@ -33,12 +33,9 @@ const Contact = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          // console.log("SUCCESS!");
           setLoadSubmit(false);
           setDisplayAlert(true);
-          setTimeout(() => {
-            setDisplayAlert(false);
-          }, "5000");
         },
         (error) => {
           console.log("FAILED...", error.text);
