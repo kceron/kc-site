@@ -316,8 +316,10 @@ dd {
     margin-top: 55px;
   }
   .contact-form {
-    /* z-index: -1; */
     position: relative;
+  }
+  .mobile-nav-open {
+    z-index: -1;
   }
   .App {
     padding-bottom: 4%;

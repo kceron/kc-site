@@ -16,6 +16,7 @@ function App() {
     contact: false,
   });
   const [initialAnimation, setInitialAnimation] = useState(true);
+  const [navMobileOpen, setNavMobileOpen] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -38,10 +39,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div className="toggle-color">COLOR ICON</div> */}
       <Header
         initialAnimation={initialAnimation}
         sections={sections}
+        navMobileOpen={navMobileOpen}
+        setNavMobileOpen={setNavMobileOpen}
         onNavItemClick={onNavItemClick}
       />
 
@@ -60,7 +62,7 @@ function App() {
       ) : sections.skills ? (
         <Skills />
       ) : sections.contact ? (
-        <Contact />
+        <Contact navMobileOpen={navMobileOpen} />
       ) : null}
 
       <Footer />

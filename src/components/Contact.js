@@ -9,11 +9,12 @@ import { ImSpinner10 } from "react-icons/im";
 import { Alert } from "antd";
 import { Input } from "antd";
 
-const Contact = () => {
+const Contact = ({ navMobileOpen }) => {
   const { TextArea } = Input;
   const contactFormRef = useRef();
   const [loadSubmit, setLoadSubmit] = useState(false);
   const [displayAlert, setDisplayAlert] = useState(false);
+  console.log("navMobileOpen-", navMobileOpen);
 
   useEffect(() => {
     contactFormRef.current.user_name.value = null;
@@ -62,7 +63,9 @@ const Contact = () => {
           </div>
         ) : ( */}
         <form
-          className={`contact-form ${loadSubmit ? "" : ""}`}
+          className={`contact-form ${loadSubmit ? "" : ""} ${
+            navMobileOpen ? "mobile-nav-open" : ""
+          }`}
           ref={contactFormRef}
           onSubmit={(e) => sendEmail(e)}
         >

@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { GrClose } from "react-icons/gr";
 
 import "../styles/header.css";
 
-const Header = ({ initialAnimation, sections, onNavItemClick }) => {
-  const [navMobileOpen, setNavMobileOpen] = useState(false);
-  // console.log("sections", sections);
+const Header = ({
+  initialAnimation,
+  sections,
+  navMobileOpen,
+  setNavMobileOpen,
+  onNavItemClick,
+}) => {
   const sectionsArr = Object.keys(sections);
-  // console.log("sectionsArr-", sectionsArr);
-  // console.log("navMobileOpen-", navMobileOpen);
 
   return (
     <div className="padding-wrapper">

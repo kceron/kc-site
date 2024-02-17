@@ -3,7 +3,6 @@ import resume from "../docs/DevResume.pdf";
 import "../styles/sections.css";
 
 const Home = ({ initialAnimation }) => {
-  // console.log(initialAnimation);
 
   return (
     <div className="padding-wrapper home-page">
