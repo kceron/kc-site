@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/karem-ceron/static/css/main.0459ec2e.css",
-    "main.js": "/karem-ceron/static/js/main.944824fa.js",
+    "main.css": "/karem-ceron/static/css/main.3ee7f57b.css",
+    "main.js": "/karem-ceron/static/js/main.ce801099.js",
     "static/media/wotfard-regular-webfont.ttf": "/karem-ceron/static/media/wotfard-regular-webfont.5ff2a2f383d647167bb0.ttf",
     "static/media/wotfard-regular-webfont.eot": "/karem-ceron/static/media/wotfard-regular-webfont.409bf748ebd44e3c4852.eot",
     "static/media/DevResume.pdf": "/karem-ceron/static/media/DevResume.379c70231ec2bba308d4.pdf",
@@ -11,11 +11,11 @@
     "static/media/github-black.svg": "/karem-ceron/static/media/github-black.56951958776829fd87e9049fa1927c16.svg",
     "index.html": "/karem-ceron/index.html",
     "static/media/linkedin-black.svg": "/karem-ceron/static/media/linkedin-black.48f4acce54e78738c735465f55f1ae7f.svg",
-    "main.0459ec2e.css.map": "/karem-ceron/static/css/main.0459ec2e.css.map",
-    "main.944824fa.js.map": "/karem-ceron/static/js/main.944824fa.js.map"
+    "main.3ee7f57b.css.map": "/karem-ceron/static/css/main.3ee7f57b.css.map",
+    "main.ce801099.js.map": "/karem-ceron/static/js/main.ce801099.js.map"
   },
   "entrypoints": [
-    "static/css/main.0459ec2e.css",
-    "static/js/main.944824fa.js"
+    "static/css/main.3ee7f57b.css",
+    "static/js/main.ce801099.js"
   ]
 }
