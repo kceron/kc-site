@@ -51,7 +51,7 @@ const Contact = () => {
             <Alert message="Success! Message sent." type="success" closable />
           </div>
         ) : null}
-        <p>
+        <p className="section-subheader">
           If you have a project in mind or just want to connect, please complete
           the form below to contact me.
         </p>
