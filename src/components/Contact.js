@@ -99,6 +99,7 @@ const Contact = ({ navMobileOpen }) => {
             id="business"
             name="business"
             type="text"
+            placeholder="Optional"
             className="contact-input"
             disabled={loadSubmit ? true : false}
           />
